@@ -26,7 +26,7 @@ class TaskList extends React.Component {
 
   render() {
     return (
-      <div >
+      <div>
         {this.state.tasks.map((task) => {
           return (
             <Task key={task.id} task={task} deleteTask={this.props.deleteTask} toggleTask={this.props.toggleTask} />

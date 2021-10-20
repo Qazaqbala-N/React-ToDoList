@@ -1,11 +1,12 @@
 import React from 'react';
+import './Task.css';
 
 const Task = ({ task, deleteTask, toggleTask }) => {
   return (
-    <div className="m-2 p-1 d-flex justify-content-between border border-info ">
-      <input type="checkbox" name="" id="" value={task.isDone} onChange={() => toggleTask(task.id)} />
+    <div className="boxer m-2 p-1 d-flex justify-content-between align-items-center border border-info">
+      <input type="checkbox" value={task.isDone} onChange={() => toggleTask(task.id)} />
       <p>{task.content}</p>
-      <button className="btn-outline-danger" onClick={() => deleteTask(task.id)}>remove</button>
+      <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/010_x-256.png" onClick={() => deleteTask(task.id)} />
     </div>
   );
 };
